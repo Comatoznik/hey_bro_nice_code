@@ -19,19 +19,12 @@ namespace WindowsFormsApp4
             InitializeComponent();
 
         }
-
-
-
         private void sort_Click(object sender, EventArgs e) // сортировка массива
         {
             Array.Sort(mas);
             for (int i = 0; i < mas.Length; i++)
                 dataGridView1.Rows[0].Cells[i].Value = mas[i];
         }
-
-
-      
-
         public void rndmas_Click(object sender, EventArgs e) //рандомное заполнение массива
         {
             dataGridView1.ColumnCount = 36;
@@ -57,7 +50,7 @@ namespace WindowsFormsApp4
             this.Close();
         }
 
-        private void button6_Click(object sender, EventArgs e) // задание (нужно доработать)
+        private void quest_Click(object sender, EventArgs e) // задание (нужно доработать)
         {
             int min1;
             int min2;
