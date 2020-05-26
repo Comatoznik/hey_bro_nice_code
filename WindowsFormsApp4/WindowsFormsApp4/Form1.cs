@@ -32,9 +32,9 @@ namespace WindowsFormsApp4
             for (int i = 0; i < mas.Length; i++)
             {
                 mas[i] = rnd.Next(-100, 100);
-                dataGridView1.Rows[0].Cells[i].Value = mas[i];
+                dataGridView1.Rows[0].Cells[i].Value = mas[i];} // заполнение ячеек 
             }
-        }
+        
 
         private void clear_Click(object sender, EventArgs e) //очистка
         {
@@ -47,7 +47,9 @@ namespace WindowsFormsApp4
 
         private void off_Click(object sender, EventArgs e) // закрытие программы
         {
-            this.Close();
+            if (MessageBox.Show("Вы уверены?", "Предупреждение", MessageBoxButtons.OKCancel) == DialogResult.OK)
+                this.Close();
+            
         }
 
         private void quest_Click(object sender, EventArgs e) // задание (нужно доработать)
@@ -70,6 +72,7 @@ namespace WindowsFormsApp4
                     label3.Text = "Минимальный элемент №2 :" + min2.ToString() + " Его индекс : " + index2;
                 }
             }
+
         }
 
         private void graph_Click(object sender, EventArgs e) //работа с графиком
@@ -88,17 +91,15 @@ namespace WindowsFormsApp4
 
         private void file_Click(object sender, EventArgs e) //файловый ввод (в процессе)
         {
-            string[] _lines = System.IO.File.ReadAllLines(@"C:\file.txt");
-            List<int> A_list = new List<int>();
-
-            foreach (var _line in _lines)
-            {
-                A_list.Add(int.Parse(_line));
-            }
-            mas = A_list.ToArray();
-            for (int i = 0; i < 36; i++)
-                dataGridView1.Rows[0].Cells[i].Value = mas.ToString();
-
+         
         }
+
+        private void button5_Click(object sender, EventArgs e) //переход на вторую форму
+        {
+            Form1.ActiveForm.Hide();
+            Form2 frm2 = new Form2();
+            frm2.Show();
+        }
+
     }
-    } 
+}
