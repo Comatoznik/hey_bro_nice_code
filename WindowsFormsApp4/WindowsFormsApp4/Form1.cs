@@ -89,11 +89,14 @@ namespace WindowsFormsApp4
             }
         }
 
-        private void file_Click(object sender, EventArgs e) //файловый ввод (в процессе)
+        private void file_Click(object sender, EventArgs e) //файловый ввод 
         {
-         
-        }
-
+            StreamReader f = new StreamReader(@"C:\\file.txt");
+            string[] a = f.ReadToEnd().Split('\n');
+            for (int i = 0; i < 36; i++) {
+                dataGridView1.Rows[0].Cells[i].Value = a[i];
+                mas[i] = Convert.ToInt32(a[i]);
+        } }
         private void button5_Click(object sender, EventArgs e) //переход на вторую форму
         {
             Form1.ActiveForm.Hide();
