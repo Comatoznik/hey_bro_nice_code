@@ -72,6 +72,9 @@ namespace WindowsFormsApp4
                     label3.Text = "Минимальный элемент №2 :" + min2.ToString() + " Его индекс : " + index2;
                 }
             }
+                if (mas[0] < 0)
+                    MessageBox.Show("Первый элемент должен быть положительным!");
+            
 
         }
 
@@ -91,12 +94,22 @@ namespace WindowsFormsApp4
 
         private void file_Click(object sender, EventArgs e) //файловый ввод 
         {
-            StreamReader f = new StreamReader(@"C:\\file.txt");
-            string[] a = f.ReadToEnd().Split('\n');
-            for (int i = 0; i < 36; i++) {
-                dataGridView1.Rows[0].Cells[i].Value = a[i];
-                mas[i] = Convert.ToInt32(a[i]);
-        } }
+            try
+            {
+                StreamReader f = new StreamReader(@"C:\\file.txt");
+
+                string[] a = f.ReadToEnd().Split('\n');
+                for (int i = 0; i < 36; i++)
+                {
+                    dataGridView1.Rows[0].Cells[i].Value = a[i];
+                    mas[i] = Convert.ToInt32(a[i]);
+                }
+            }
+            catch (FileNotFoundException)
+            {
+                MessageBox.Show("Файл не найден!");
+            }
+        } 
         private void button5_Click(object sender, EventArgs e) //переход на вторую форму
         {
             Form1.ActiveForm.Hide();
