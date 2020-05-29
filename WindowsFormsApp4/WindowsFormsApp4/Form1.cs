@@ -52,7 +52,7 @@ namespace WindowsFormsApp4
             
         }
 
-        private void quest_Click(object sender, EventArgs e) // задание (нужно доработать)
+        private void quest_Click(object sender, EventArgs e) // задание
         {
             int min1;
             int min2;

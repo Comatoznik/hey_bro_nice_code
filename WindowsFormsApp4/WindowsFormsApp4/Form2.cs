@@ -22,7 +22,7 @@ namespace WindowsFormsApp4
 
         }
 
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)// информация о разработчике
         {
             if (checkBox1.Checked == true)
                 textBox1.Show();
@@ -45,7 +45,7 @@ namespace WindowsFormsApp4
                 textBox2.Show();
             else textBox2.Hide();
         }
-        private void button1_Click(object sender, EventArgs e) // информация о разработчике
+        private void button1_Click(object sender, EventArgs e) // переход на главную форму
         {
             Form2.ActiveForm.Hide();
             Form1 frm1 = new Form1();
