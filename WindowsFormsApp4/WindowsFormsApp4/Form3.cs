@@ -10,25 +10,25 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp4
 {
-    public partial class Form2 : Form
+    public partial class Form3 : Form
     {
-        public Form2()
+        public Form3()
         {
             InitializeComponent();
         }
 
         private void наГлавнуюФормуToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form2.ActiveForm.Hide();
+            Form3.ActiveForm.Hide();
             Form1 frm1 = new Form1();
             frm1.Show();
         }
 
-        private void посланиеОтРазработчикаToolStripMenuItem_Click(object sender, EventArgs e)
+        private void справкаToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form2.ActiveForm.Hide();
-            Form3 frm3 = new Form3();
-            frm3.Show();
+            Form3.ActiveForm.Hide();
+            Form2 frm2 = new Form2();
+            frm2.Show();
         }
     }
 }

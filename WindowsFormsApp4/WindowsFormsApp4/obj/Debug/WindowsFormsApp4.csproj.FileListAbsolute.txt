@@ -8,3 +8,4 @@ C:\Users\Comatoznik\source\repos\WindowsFormsApp4\WindowsFormsApp4\obj\Debug\Win
 C:\Users\Comatoznik\source\repos\WindowsFormsApp4\WindowsFormsApp4\obj\Debug\WindowsFormsApp4.exe
 C:\Users\Comatoznik\source\repos\WindowsFormsApp4\WindowsFormsApp4\obj\Debug\WindowsFormsApp4.pdb
 C:\Users\Comatoznik\source\repos\WindowsFormsApp4\WindowsFormsApp4\obj\Debug\WindowsFormsApp4.Form2.resources
+C:\Users\Comatoznik\source\repos\WindowsFormsApp4\WindowsFormsApp4\obj\Debug\WindowsFormsApp4.Form3.resources

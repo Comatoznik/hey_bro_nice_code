@@ -109,13 +109,23 @@ namespace WindowsFormsApp4
             {
                 MessageBox.Show("Файл не найден!");
             }
-        } 
-        private void button5_Click(object sender, EventArgs e) //переход на вторую форму
+        }
+
+        
+
+        public void toolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            Form1.ActiveForm.Hide();
+            Form3 frm3 = new Form3();
+            frm3.Show();   
+        }
+
+        private void toolStripMenuItem3_Click(object sender, EventArgs e)
         {
             Form1.ActiveForm.Hide();
             Form2 frm2 = new Form2();
             frm2.Show();
+            
         }
-
     }
 }
