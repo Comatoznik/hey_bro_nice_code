@@ -17,14 +17,14 @@ namespace WindowsFormsApp4
             InitializeComponent();
         }
 
-        private void наГлавнуюФормуToolStripMenuItem_Click(object sender, EventArgs e)
+        private void наГлавнуюФормуToolStripMenuItem_Click(object sender, EventArgs e)// переход на главную
         {
             Form3.ActiveForm.Hide();
             Form1 frm1 = new Form1();
             frm1.Show();
         }
 
-        private void справкаToolStripMenuItem_Click(object sender, EventArgs e)
+        private void справкаToolStripMenuItem_Click(object sender, EventArgs e) // переход на справку
         {
             Form3.ActiveForm.Hide();
             Form2 frm2 = new Form2();

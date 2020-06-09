@@ -21,17 +21,17 @@ namespace WindowsFormsApp4
         }
         private void sort_Click(object sender, EventArgs e) // сортировка массива
         {
-            Array.Sort(mas);
+            Array.Sort(mas); //сортировка методом Sort
             for (int i = 0; i < mas.Length; i++)
-                dataGridView1.Rows[0].Cells[i].Value = mas[i];
+                dataGridView1.Rows[0].Cells[i].Value = mas[i]; // заполнение ячеек dataGridViev
         }
         public void rndmas_Click(object sender, EventArgs e) //рандомное заполнение массива
         {
-            dataGridView1.ColumnCount = 36;
-            Random rnd = new Random();
+            dataGridView1.ColumnCount = 36; // кол-во столбцов
+            Random rnd = new Random(); // рандом
             for (int i = 0; i < mas.Length; i++)
             {
-                mas[i] = rnd.Next(-100, 100);
+                mas[i] = rnd.Next(-100, 100);// заполнение массива рандомными числами
                 dataGridView1.Rows[0].Cells[i].Value = mas[i];} // заполнение ячеек 
             }
         
@@ -39,16 +39,16 @@ namespace WindowsFormsApp4
         private void clear_Click(object sender, EventArgs e) //очистка
         {
             for (int i = 0; i < dataGridView1.ColumnCount; i++)
-                dataGridView1.Rows[0].Cells[i].Value = "";
+                dataGridView1.Rows[0].Cells[i].Value = ""; //очистка dataGridView
             label2.Text = "";
-            label3.Text = "";
+            label3.Text = ""; // очистка меток
 
         }
 
         private void off_Click(object sender, EventArgs e) // закрытие программы
         {
             if (MessageBox.Show("Вы уверены?", "Предупреждение", MessageBoxButtons.OKCancel) == DialogResult.OK)
-                this.Close();
+                this.Close(); // диалоговое окно с подтверждением действия о закрытии программы
             
         }
 
@@ -59,17 +59,17 @@ namespace WindowsFormsApp4
             min1 = min2 = mas[0];
             for (int i = 0; i < mas.Length; i++)
             {
-                if (mas[i] > 0 && min1 > mas[i])
+                if (mas[i] > 0 && min1 > mas[i]) // нахождение первого минимального элемента
                 {
                     min1 = mas[i];
-                    int index1 = i + 1;
-                    label2.Text = "Минимальный элемент №1 :" + min1.ToString() + " Его индекс : " + index1;
+                    int index1 = i + 1; // индекс этого элемента
+                    label2.Text = "Минимальный элемент №1 :" + min1.ToString() + " Его индекс : " + index1;//вывод на метку
                 }
-                if (mas[i] > min1 && min2 > mas[i])
+                if (mas[i] > min1 && min2 > mas[i])//нахождение второго минимального элемента
                 {
                     min2 = mas[i];
-                    int index2 = i + 1;
-                    label3.Text = "Минимальный элемент №2 :" + min2.ToString() + " Его индекс : " + index2;
+                    int index2 = i + 1;//его индекс
+                    label3.Text = "Минимальный элемент №2 :" + min2.ToString() + " Его индекс : " + index2;//вывод на метку
                 }
             }
                 if (mas[0] < 0)
@@ -80,15 +80,15 @@ namespace WindowsFormsApp4
 
         private void graph_Click(object sender, EventArgs e) //работа с графиком
         {
-            int[] x = mas;
-            int[] y = new int[36];
+            int[] x = mas;//данные по оси Х
+            int[] y = new int[36];// данные по Y
             for (int i = 0; i < 36; i++)
             {
                 y[i] = mas[i];
                 x[i] = i;
-                chart1.ChartAreas[0].AxisY.MajorGrid.Interval = 1;
-                chart1.ChartAreas[0].AxisX.MajorGrid.Interval = 2;
-                chart1.Series[0].Points.DataBindXY(x, y);
+                chart1.ChartAreas[0].AxisY.MajorGrid.Interval = 1; //интервал по оси Y
+                chart1.ChartAreas[0].AxisX.MajorGrid.Interval = 2; //интервал по оси Х
+                chart1.Series[0].Points.DataBindXY(x, y); // построение графика
             }
         }
 
@@ -96,31 +96,31 @@ namespace WindowsFormsApp4
         {
             try
             {
-                StreamReader f = new StreamReader(@"C:\\file.txt");
+                StreamReader f = new StreamReader(@"C:\\file.txt");//объявление стримридера
 
-                string[] a = f.ReadToEnd().Split('\n');
+                string[] a = f.ReadToEnd().Split('\n'); //чтение данных из файла
                 for (int i = 0; i < 36; i++)
                 {
-                    dataGridView1.Rows[0].Cells[i].Value = a[i];
-                    mas[i] = Convert.ToInt32(a[i]);
+                    dataGridView1.Rows[0].Cells[i].Value = a[i]; //заполнение ячеек
+                    mas[i] = Convert.ToInt32(a[i]);//заполнение массива
                 }
             }
             catch (FileNotFoundException)
             {
-                MessageBox.Show("Файл не найден!");
+                MessageBox.Show("Файл не найден!");// исключение при отсутствии файла
             }
         }
 
         
 
-        public void toolStripMenuItem2_Click(object sender, EventArgs e)
+        public void toolStripMenuItem2_Click(object sender, EventArgs e)// переход на 3 форму
         {
             Form1.ActiveForm.Hide();
             Form3 frm3 = new Form3();
             frm3.Show();   
         }
 
-        private void toolStripMenuItem3_Click(object sender, EventArgs e)
+        private void toolStripMenuItem3_Click(object sender, EventArgs e) //переход на 2 форму
         {
             Form1.ActiveForm.Hide();
             Form2 frm2 = new Form2();
