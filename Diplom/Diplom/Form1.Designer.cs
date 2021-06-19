@@ -38,12 +38,13 @@ namespace Diplom
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label4
             // 
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label4.Location = new System.Drawing.Point(12, 207);
+            this.label4.Location = new System.Drawing.Point(12, 233);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(655, 129);
             this.label4.TabIndex = 6;
@@ -118,19 +119,31 @@ namespace Diplom
             // button9
             // 
             this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button9.Location = new System.Drawing.Point(453, 118);
+            this.button9.Location = new System.Drawing.Point(242, 172);
             this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(197, 39);
+            this.button9.Size = new System.Drawing.Size(189, 39);
             this.button9.TabIndex = 18;
             this.button9.Text = "Выйти";
             this.button9.UseVisualStyleBackColor = true;
             this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
+            // button6
+            // 
+            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button6.Location = new System.Drawing.Point(453, 118);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(197, 39);
+            this.button6.TabIndex = 19;
+            this.button6.Text = "Записаться к врачу";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click_1);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(679, 345);
+            this.ClientSize = new System.Drawing.Size(679, 371);
+            this.Controls.Add(this.button6);
             this.Controls.Add(this.button9);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
@@ -141,7 +154,7 @@ namespace Diplom
             this.Controls.Add(this.label4);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
-            this.Text = "Пособие по С#";
+            this.Text = "Новинки стоматологии";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
 
@@ -156,6 +169,7 @@ namespace Diplom
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button button6;
     }
 }
 

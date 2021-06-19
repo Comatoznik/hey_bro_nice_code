@@ -35,7 +35,7 @@ namespace Diplom
 
         private void Form1_Load(object sender, EventArgs e)
         {
-         
+            Log.Logger("Открыта главная форма");
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -118,6 +118,13 @@ namespace Diplom
             this.Hide();
             Regauto regauto = new Regauto();
             regauto.Show();
+        }
+
+        private void button6_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+            Doc doc = new Doc();
+            doc.Show();
         }
     }
 }

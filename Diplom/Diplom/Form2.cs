@@ -29,7 +29,7 @@ namespace Diplom
 
         private void Form2_Load(object sender, EventArgs e)
         {
-            // richTextBox1.AppendText("public class InterestEarningAccount : BankAccount \n{\n}\n public class LineOfCreditAccount : BankAccount\n{\n}\n public class GiftCardAccount : BankAccount \n{\n}\n");
+            Log.Logger("Открыта форма 3D печати");
 
 
         }

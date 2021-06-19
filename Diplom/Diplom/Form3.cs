@@ -23,5 +23,10 @@ namespace Diplom
             Form1 f1 = new Form1();
             f1.Show();
         }
+
+        private void Form3_Load(object sender, EventArgs e)
+        {
+            Log.Logger("Открыта форма VR");
+        }
     }
 }

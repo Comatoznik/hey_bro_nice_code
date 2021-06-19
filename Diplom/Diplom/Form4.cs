@@ -33,7 +33,7 @@ namespace Diplom
 
         private void Form4_Load(object sender, EventArgs e)
         {
-
+            Log.Logger("Открыта форма телестоматологии");
         }
 
         private void checkedListBox2_SelectedIndexChanged(object sender, EventArgs e)
